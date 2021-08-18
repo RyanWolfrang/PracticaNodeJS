@@ -2,7 +2,7 @@ const prompt = require("prompt-sync")();
 
 var validator = require("validator");
 
-const usuarios = require("./usuarios")
+const usuarios = require("./usuarios");
 
 console.log("Bienvenido al sistema")
 
@@ -63,3 +63,14 @@ while(true){
     }
 
 }
+
+
+
+
+
+var a = axios.get("http://localhost:3000/usuarios").then(
+    function (resp){
+        console.log(resp);
+    }
+)
+console.log (a)
